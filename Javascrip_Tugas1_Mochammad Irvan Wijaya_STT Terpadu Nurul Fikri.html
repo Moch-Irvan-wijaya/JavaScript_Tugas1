@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tugas 1 - Luas Bangun Datar</title>
+</head>
+<body>
+  <script>
+    // ===== Konstanta =====
+    // const dipakai untuk nilai yang tidak berubah selama program berjalan
+    const SETENGAH = 0.5; // dipakai pada rumus luas segitiga (1/2)
+
+    // ===== Fungsi =====
+
+    // Fungsi luasPersegiPanjang
+    // Menghitung luas persegi panjang dengan rumus: panjang * lebar
+    // Operator yang dipakai: * (perkalian)
+    function luasPersegiPanjang(panjang, lebar) {
+      let luas = panjang * lebar;
+      return luas;
+    }
+
+    // Fungsi luasBujurSangkar
+    // Menghitung luas bujur sangkar dengan rumus: sisi * sisi
+    // Operator yang dipakai: * (perkalian)
+    function luasBujurSangkar(sisi) {
+      let luas = sisi * sisi;
+      return luas;
+    }
+
+    // Fungsi luasSegitiga
+    // Menghitung luas segitiga dengan rumus: 1/2 * alas * tinggi
+    // Operator yang dipakai: * (perkalian)
+    function luasSegitiga(alas, tinggi) {
+      let luas = SETENGAH * alas * tinggi;
+      return luas;
+    }
+
+    // ===== Deklarasi dan inisialisasi variabel (nilai bebas) =====
+    let panjang = 12, lebar = 5; // persegi panjang
+    let sisi = 8;                // bujur sangkar
+    let alas = 10, tinggi = 6;   // segitiga
+
+    // ===== Memanggil fungsi =====
+    let luasPP = luasPersegiPanjang(panjang, lebar);
+    let luasBS = luasBujurSangkar(sisi);
+    let luasSG = luasSegitiga(alas, tinggi);
+
+    // ===== Cetak data =====
+    document.write("<h1 align='center'>MENGHITUNG LUAS BANGUN DATAR</h1><hr/>");
+
+    document.write("<b>Persegi Panjang</b>");
+    document.write("<br/>Panjang: " + panjang + ", Lebar: " + lebar);
+    document.write("<br/>Luas = " + luasPP);
+
+    document.write("<br/><br/><b>Bujur Sangkar</b>");
+    document.write("<br/>Sisi: " + sisi);
+    document.write("<br/>Luas = " + luasBS);
+
+    document.write("<br/><br/><b>Segitiga</b>");
+    document.write("<br/>Alas: " + alas + ", Tinggi: " + tinggi);
+    document.write("<br/>Luas = " + luasSG);
+  </script>
+</body>
+</html>
